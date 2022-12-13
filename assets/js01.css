@@ -1,0 +1,10 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+nav h1{
+    padding: 25px;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
