@@ -26,6 +26,7 @@
         </div>
     </nav>
     <section>
+    <form action="#" method="get">   
         <div class="container-fluid">
             <div class="row" style="margin-top: 30px;">
                 <div class="col-md-3">
@@ -40,36 +41,40 @@
                             <div class="col">
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Nilai-1</label>
-                                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <input type="number" id="nilai1" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Nilai-2</label>
-                                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <input type="number" id="nilai2" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Nilai-3</label>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>-- Pilih --</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
+                                    <select class="form-select" aria-label="Default select example" id="operator" >
+                                        <option value="">-- Pilih --</option>
+                                        <option value="+">Pertambahan</option>
+                                        <option value="-">Pengurangan</option>
+                                        <option value="*">Perkalian</option>
+                                        <option value="/">Pembagian</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="d-grid gap-2">
-                        <button class="btn btn-primary" type="button">Proses</button>
+                        <button class="btn btn-primary" id="btnbtn" type="button" onclick="Kalkulator()"><i class="bi bi-save"></i>  Proses</button>
+                        <div class="alert alert-warning" role="alert" id="hasilkalkulator" style="display: none;"></div>
                     </div>
                     <hr>
-                    <button type="button" class="btn btn-secondary">Reset</button>
+                    <button type="reset" class="btn btn-secondary" onclick="hilangkan()">Reset</button>
                 </div>
             </div>
         </div>
+    </form> 
     </section>
+    <script src="assets/main.js"></script>
 </body>
 </html>
