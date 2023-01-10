@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota Pembayaran</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
+
+</head>
+<body id="time">
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="#">Ud's Resto</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <h1 style="font-family: Source Serif Pro ;">Karcis Pembayaran Resto</h1>
+    <hr>
+    <div class="container-fluid">
+        <form action="#" method="get" id="form1">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h5>Kode Menu :</h5>              
+                        </div>
+                        <div class="col">
+                            <div class="input-group input-group-sm mb-3">
+                                <input id="kmenu" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Kode Menu">
+                            </div>                          
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h5>Nama Menu :</h5>              
+                        </div>
+                        <div class="col">
+                            <div class="input-group input-group-sm mb-3">
+                                <input id="nmenu" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Nama Menu">
+                            </div>                          
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h5>Jenis Makanan :</h5>              
+                        </div>
+                        <div class="col">
+                            <div class="input-group input-group-sm mb-3">
+                                <select id="jm" class="form-select" aria-label="Default select example">
+                                    <option selected>---Pilih---</option>
+                                    <option value="Makanan">Makanan</option>
+                                    <option value="Minuman">Minuman</option>
+                                    <option value="Snack">Snack</option>
+                                </select>
+                            </div>                          
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h5>Harga :</h5>              
+                        </div>
+                        <div class="col">
+                            <div class="input-group input-group-sm mb-3">
+                                <input id="harga" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Harga">
+                            </div>                          
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h5>Jumlah Beli :</h5>              
+                        </div>
+                        <div class="col">
+                            <div class="input-group input-group-sm mb-3">
+                                <input id="jb" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Jumlah Beli">
+                            </div>                          
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h5>Pembayaran :</h5>              
+                        </div>
+                        <div class="col">
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="tn" value="option1" checked>
+                                    <label  class="form-check-label" for="exampleRadios1">
+                                      Tunai
+                                    </label>
+                                </div>
+                                <div class="form-check" style="margin-left: 25px;">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="ntn" value="option1" checked>
+                                    <label  class="form-check-label" for="exampleRadios1">
+                                      Non Tunai
+                                    </label>
+                                </div>                                                                                                              
+                            </div>              
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+                        <div class="col">
+                            <div class="d-grid gap-2">
+                                <button id="btn" class="btn btn-primary btn btn-dark" type="button">Order</button>
+                            </div>                          
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <h3 style="font-family: Helvetica;"><b>Invoice:</b></h3>
+                            </div>
+                            <div class="col-sm-5">
+                                <input id="kode" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" readonly disabled>                          
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <table>
+                        <tr>
+                            <table class="table table-borderless w-50 p-3">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"><b>Kode :</b></th>
+                                            <td id="data1"></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><b>Nama :</b></th>
+                                            <td id="data2"></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><b>Jenis :</b></th>
+                                            <td id="data3"></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><b>Jumlah Beli :</b></th>
+                                            <td id="data4"></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><b>Diskon :</b></th>
+                                            <td id="data5"></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><b>Total Bayar :</b></th>
+                                            <td id="data6"></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><b>Pembayaran :</b></th>
+                                            <td id="data7"></td>
+                                        </tr>
+                                    </tbody>
+                              </table>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </form>
+        <!--  -->
+    </div>
+    <script src="assets/kasir.js"></script>
+</body>
+</html>
