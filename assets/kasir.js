@@ -6,13 +6,14 @@ document.getElementById("time").onload = function(){
 
     today = dd + yy;
     tgl = document.getElementById('kode').value = "INV" + today + "001";
-};
+    pembayaran();
+}
 
 document.getElementById("kmenu").onkeyup = function(){
     let txtnama = document.getElementById("kmenu").value;
     let txtnama2 = txtnama.toUpperCase();
     document.getElementById("kmenu").value = txtnama2;
-};
+}
 
 document.getElementById("btn").onclick = function(){
     let menu = document.getElementById('kmenu').value;
@@ -25,18 +26,22 @@ document.getElementById("btn").onclick = function(){
 
     let pembayaran;
         if(document.getElementById("tn").checked == true){
-            pembayaran = "Tunai"};
+            pembayaran = "Tunai"}
         if(document.getElementById("ntn").checked == true){
-            pembayaran = "Non-Tunai"};
+            pembayaran = "Non-Tunai"}
+        else{
+            alert("Milih")
+            pembayaran;
+        }
 
     let harga = document.getElementById('harga').value;
     
     total(jb,harga); 
             
-    document.getElementById('data1').innerHTML = menu;
-    document.getElementById('data2').innerHTML = nama;
-    document.getElementById('data4').innerHTML = jb
-    document.getElementById('data7').innerHTML = pembayaran;
+    document.getElementById('data1').innerHTML=menu;
+    document.getElementById('data2').innerHTML=nama;
+    document.getElementById('data4').innerHTML=jb;
+    document.getElementById('data7').innerHTML=pembayaran;
 }
 function combobox(){
     let jenis = document.getElementById('form1').jm.value;
@@ -68,4 +73,27 @@ function total(jb, harga){
         first = (jb*harga);
         document.getElementById('data6').innerHTML = first;
     }
+}
+
+document.getElementById('nmenu').onchange=function(){
+    let bs=document.getElementById("nmenu").value
+    let harga=0;
+    if(bs == "Bakso"){
+        harga = 20000;
+    }
+    if(bs == "Mie Ayam"){
+        harga = 10000;
+    }
+    else{
+        harga = 3000;
+    }
+    document.getElementById('harga').value = harga;
+}
+function pembayaran(){
+    let carabayar = ["Tunai", "Non Tunai"];
+    let jenis = "";
+    for (let i=0;i<carabayar.length; i++){
+        jenis +='<input class="form-check-input" type="radio" name="carabayar" id= ""'+carabayar[i]+'" />' +carabayar[i]+"";
+    }
+    document.getElementById("jenisbayar").innerHTML = jenis;
 }

@@ -57,7 +57,14 @@
                         </div>
                         <div class="col">
                             <div class="input-group input-group-sm mb-3">
-                                <input id="nmenu" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Nama Menu">
+                                <div class="input-group input-group-sm mb-3">
+                                    <select id="nmenu" class="form-select" aria-label="Default select example">
+                                        <option selected>---Silahkan Pesan---</option>
+                                        <option value="Bakso">Bakso</option>
+                                        <option value="Mie Ayam">Mie Ayam</option>
+                                        <option value="Es Teh">Es Teh</option>
+                                    </select>
+                                </div>
                             </div>                          
                         </div>
                     </div>
@@ -100,21 +107,21 @@
                         <div class="col-sm-3">
                             <h5>Pembayaran :</h5>              
                         </div>
-                        <div class="col">
-                            <div class="input-group input-group-sm mb-3">
+                        <div class="col-sm-9" id="jenisbayar">
+                            <!-- <div class="input-group input-group-sm mb-3">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="tn" value="option1" checked>
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="tn" value="option1">
                                     <label  class="form-check-label" for="exampleRadios1">
                                       Tunai
                                     </label>
                                 </div>
                                 <div class="form-check" style="margin-left: 25px;">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="ntn" value="option1" checked>
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="ntn" value="option1">
                                     <label  class="form-check-label" for="exampleRadios1">
                                       Non Tunai
                                     </label>
                                 </div>                                                                                                              
-                            </div>              
+                            </div>               -->
                         </div>
                     </div>
                     <div class="row">
@@ -177,7 +184,6 @@
                 </div>
             </div>
         </form>
-        <!--  -->
     </div>
     <script src="assets/kasir.js"></script>
 </body>
